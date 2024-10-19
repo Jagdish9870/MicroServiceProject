@@ -10,6 +10,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 
 @Entity
 @Getter
@@ -22,5 +24,7 @@ public class Quizs {
 
     private Long id;
     private String title;
+    transient private List<Questions> questions; // transient is used to prevent it being serialized means you can not share thi son the network...
+
 
 }
